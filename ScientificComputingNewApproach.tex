@@ -1,0 +1,261 @@
+%
+% Body text font is Palatino!
+%
+
+\documentclass[paper=9in:6in,pagesize=pdftex,headinclude=on,footinclude=on,10pt,bibtotoc,pointlessnumbers,normalheadings,DIV=9,twoside=false]{scrbook}
+
+\areaset[0.50in]{4.5in}{8in}
+
+% twoside, openright
+\KOMAoptions{DIV=last}
+
+\usepackage{trajan}
+ 
+%\usepackage[brazilian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{upgreek}
+\usepackage{float}
+\usepackage[normal,font={footnotesize,it}]{caption}
+
+\usepackage[sc]{mathpazo}
+\linespread{1.05} 
+
+\usepackage{verbatim} % for comments
+\usepackage{listings} % for comments
+
+
+\newcommand{\q}[1]{>>\textit{#1}<<}
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\usepackage{tkz-graph}
+\usepackage[square, numbers, comma, sort&compress]{natbib}  
+\usepackage{verbatim}  
+\usepackage{tex/vector}  
+\usepackage{nomencl}
+\usepackage{mathrsfs}
+\usepackage{aurical}
+\usepackage{calligra}
+%\usepackage{tgchorus}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+%\usepackage{gfsartemisia-euler}
+%\usepackage{mathptmx}\\
+\usepackage{csvsimple}
+%\usepackage{ulem}
+\usepackage{bm}
+\usepackage{wrapfig}
+
+
+\newcommand{\av}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\bo}[1]{\boldsymbol{#1}}
+\newcommand{\nn}{\nonumber \\}
+\newcommand{\z}{Z\kern-0.6emZ}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\uD}{\mathrm{D}}
+\newcommand{\mc}{\mathcal}
+%\newcommand{\bm}[1]{\boldsymbol{#1}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\intf}{\int_{-\infty}^\infty}
+\newcommand{\ch} {\mbox{\Fontauri ch}}
+\newcommand{\pa} {\mbox{\Fontauri pa}}
+\def\duline#1{\underline{\underline{#1}}}
+
+\newcommand{\addtotoc}[2]{
+    \phantomsection
+    \addcontentsline{toc}{chapter}{#1}
+    #2 \clearpage
+}
+
+\usepackage{amsthm}
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
+
+\theoremstyle{plain}
+\newtheorem{example}{Exemplo}[chapter]
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{corollary}[theorem]{Corol\'ario}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposi\c{c}\~ao}
+\newtheorem{axiom}[theorem]{Axioma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Defini\c{c}\~ao}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Observa\c{c}\~ao}
+\usepackage[centerlast,small,sc]{caption}
+\setlength{\captionmargin}{20pt}
+\newcommand{\fref}[1]{Figura~\ref{#1}}
+\newcommand{\tref}[1]{Tabela~\ref{#1}}
+\newcommand{\eref}[1]{Equa\c{c}\~{a}o~\ref{#1}}
+\newcommand{\cref}[1]{Cap\'{\i}tulo~\ref{#1}}
+\newcommand{\sref}[1]{Se\c{c}\~{a}o~\ref{#1}}
+\newcommand{\aref}[1]{Ap\^endice~\ref{#1}}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newenvironment{proof}[1][Prova]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%\newenvironment{definition}[1][Definição]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%\newenvironment{example}[1][Exemplo]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%\newenvironment{remark}[1][Observação]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+%\newcommand{\qed}{\nobreak \ifvmode \relax \else
+ %     \ifdim\lastskip<1.5em \hskip-\lastskip
+ %     \hskip1.5em plus0em minus0.5em \fi \nobreak
+ %     \vrule height0.75em width0.5em depth0.25em\fi}
+
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+            \node[shape=circle,fill=red!20,draw,inner sep=2pt] (char) {#1};}}
+
+
+
+\makenomenclature
+
+
+\usepackage{makeidx}
+\makeindex
+\usepackage[totoc]{idxlayout}
+
+
+\usepackage[ % for hyper links in dvi ending in postscript and PDF
+pdftex, % pdf output
+pdfborder= 0 0 0,
+a4paper, % a4 paper
+colorlinks=true, % links are colored
+citecolor=green, % color of cite links
+linkcolor=cyan, % color of hyperref links
+menucolor=blue, % color of Acrobat Reader menu buttons
+urlcolor=magenta, % color of page of \url{...}
+bookmarksopen=true
+]{hyperref}
+
+
+\usepackage{dsfont}
+
+
+%% ----------------------------------------------------------------
+
+
+\title{A New Approach to Scientific Computing}   
+\author{Renato Vicente} 
+\date{\today} 
+
+\begin{document}
+
+\graphicspath{{figs/}}  
+%=========================================
+\begin{titlepage}
+		\centering{
+			\textcolor{blue} {\fontsize{16}{16}\selectfont 
+			A New Approach to Scientific Computing}
+		}\\
+			
+		\vspace{10mm}
+		\centering{\large{Renato Vicente}\\
+		\small{Dep. de Matem\'atica Aplicada \\
+		Instituto de Matemática e Estat\'{\i}stica \\
+		Universidade de S\~ao Paulo}}\\
+		\vspace{\fill}
+		\centering 	\textcolor{blue}{\large{2017}}
+\end{titlepage}
+
+
+%=========================================
+\newpage{}
+\thispagestyle {empty}
+
+\vspace*{2cm}
+
+\begin{center}
+	\Large{\parbox{10cm}{
+		\begin{raggedright}
+		{\Large 
+			\textcolor{violet}{	\textit{O Fortuna velut luna statu variabilis, semper crescis
+             aut decrescis.}}
+		}
+	
+		\vspace{.5cm}\hfill{\textcolor{violet}{--- Carmina Burana}}
+		\end{raggedright}
+	}
+}	
+\end{center}
+
+\newpage
+
+
+%=========================================
+%\setstretch{1.3}  
+
+%\fancyhead{} 
+%\rhead{\thepage} 
+%\lhead{}  
+%\pagestyle{fancy}  
+
+%\setstretch{1.3}  
+%\pagestyle{fancy}  
+
+%\lhead{\emph{Sumário}}  
+\tableofcontents  
+
+%% ----------------------------------------------------------------
+%\lhead{\emph{Lista de Figuras}}
+%\listoffigures  % Write out the List of Figures
+
+%% ----------------------------------------------------------------
+%\lhead{\emph{Lista de Tabelas}}  % Set the left side page header to "List of Tables"
+%\listoftables  % Write out the List of Tables
+
+%\renewcommand{\nomname}{Lista de Abreviações e Notações}
+%\addcontentsline{toc}{chapter}{\nomname}
+%\lhead{\emph{Lista de Abreviações}}
+%\printnomenclature [5em]
+
+\addtocontents{toc}{\vspace{2em}}  
+\input{./chaps/Preface} 
+
+
+\mainmatter	  
+%\pagestyle{fancy} 
+
+\setcounter{page}{6}
+
+\input{./chaps/Intro} 
+\input{./chaps/Probability} 
+\input{./chaps/Statistics} 
+\input{./chaps/Difference}
+\input{./chaps/SolvingEqs} 
+\input{./chaps/Optimization} 
+\input{./chaps/TrainingMachines} 
+\input{./chaps/spectral}
+\input{./chaps/Integration}
+\input{./chaps/Inference} 
+\input{./chaps/DimensionalReduction}
+\input{./chaps/MonteCarlo}
+
+
+\addtocontents{toc}{\vspace{2em}} 
+\appendix 
+
+\addtocontents{toc}{\vspace{2em}}  %
+
+\backmatter
+\clearpage
+
+\label{Bibliografia}
+\bibliographystyle{unsrt}  
+\bibliography{Bibliography}   
+\printindex
+
+\end{document}
