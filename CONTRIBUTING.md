@@ -1,10 +1,10 @@
 # Contribution Guidelines
 
 To start contributing you will need a github account, you can create one
-(here)[https://github.com/join?source=header-home].
+[here](https://github.com/join?source=header-home).
 
-Before starting to contribute you need to check the (issues
-board)[https://github.com/infobayes/ScientificComputingNewApproach/issues].
+Before starting to contribute you need to check the [issues
+board](https://github.com/infobayes/ScientificComputingNewApproach/issues).
 
 If you want to contribute with an already created issue you must comment that
 you want to work on it ask for an assigment to the issue. If want to contribute
@@ -88,12 +88,12 @@ other pertinent details regarding your changes. Guide others on how to test
 your changes and where to look more carefully.
 
 To have your PR accepted you need at least two approves, one by a coleague and
-another one by (@renatovicente)[https://github.com/renatovicente].
+another one by [@renatovicente](https://github.com/renatovicente).
 
 
 ## Conflicts
 
 You may find conflicts while submitting a PR, if you are not
 able to solve the conflicts by yourself still open the PR and for help,
-(@otaviocv)[https://github.com/otaviocv] will be always available to fix
+[@otaviocv](https://github.com/otaviocv) will be always available to fix
 conflicts.
