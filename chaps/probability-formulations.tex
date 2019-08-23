@@ -1,0 +1,50 @@
+% The development in question aims to present the main fundamentals of probability. The student Gabriel Aguiar did not seek to fit the text into the predefined body of the "Probability" chapter.
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Probability fundamentals}
+\author{Gabriel Aguiar}
+\date{August 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Formulations}
+
+\begin{itemize}
+    
+\item We define as Sample space $\Omega$ a set of elementary events.
+
+\item We define as Sigma-algebra $\Sigma$ a set of $\Omega$ subsets. $\Sigma$ shows the following properties:
+
+\begin{enumerate}
+
+\item Set of random events;
+
+\item $\Omega$ belongs to $\Sigma$;
+
+\item If A and B belong to $\Sigma$, their union and their intersection also belong.
+
+\end{enumerate}
+        
+\item We define as probability a function $P: \Sigma \rightarrow [0, 1]$. $P$ presents the following properties:
+
+\begin{enumerate}
+
+\item $P(\Omega) = 1$; 
+
+\item If A and B are $\Sigma$ disjoint subsets, $P(A \cup B) = P(A) + P(B)$.
+
+\end{enumerate}
+
+\item $P(B/A) \doteq \frac{1}{P(A)} \; P(A \cap B)$.
+
+\item Bayes' Theorem: $P(B/A) = P(A/B) \; \frac{P(B)}{P(A)}$.
+
+\item Total Probability Theorem: $P(B) = \sum\limits_{j} \; P(B/A_{j}) \; P(A_{j})$, for all disjoint $A_{j}$ belonging to $\Sigma$, such that $\bigcup\limits_{j} A_{j} = \Omega$.
+        
+\end{itemize}
+
+\end{document}
