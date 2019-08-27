@@ -1,3 +1,5 @@
+% The development in question aims to present the main fundamentals of probability. The student Gabriel Aguiar did not seek to fit the text into the predefined body of the "Probability" chapter.
+
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -35,7 +37,7 @@ $p$: Failure probability
 
 $P(k/n,p) = \binom{n}{k} \; p^{k} \; (1 - p)^{n - k}$
 
-$k$: Occurrences; $n$: Trials; $p$: Elementary probability
+$k$: Occurrences; $n$: Attempts; $p$: Elementary probability
 
 \item Poisson distribution (rare events):
 
@@ -57,7 +59,15 @@ $k$: Occurrences in the sample; $n$: Total size
 
 $n_{1}$: Occurrences set size
 
-\break
+\item Negative binomial distribution
+
+$P(k/r,p) = \binom{r + k - 1}{k} \; p^{r} \; (1 - p)^{k}$
+
+$k$: Number of failures; $r$: Number of hits; $p$: Hit probability
+
+Or, with $n = r + k$ attempts for $r$ hits:
+
+$P(n/r,p) = \binom{n - 1}{k} \; p^{r} \; (1 - p)^{n - r}$
 
 \item Multinomial distribution:
 
@@ -72,12 +82,3 @@ $k \in \mathbb{N}$
 \end{itemize}
 
 \end{document}
-
-
-
-
-
-
-
-
-
