@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Probability fundamentals}
+\author{Gabriel Aguiar}
+\date{August 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Continuous model}
+
+\begin{itemize}
+
+\item We define as Probability density function an application $f: K \rightarrow \mathbb{R}$. $f$ presents the following properties:
+
+\begin{enumerate}
+
+\item Non-negativity: $f(x) \geq 0, \forall \; x \in K$
+
+\item Normalization: $\int\limits_{-\infty}^{+\infty} f(x) dx = 1$
+
+\end{enumerate}
+
+\item We define as Probability distribution the function $F: K \rightarrow [0,1]$. $F$ presents the following property:
+
+$F(a \leq x \leq b) = \int\limits_{a}^{b} f(x) dx$
+
+\item Uniform distribution:
+
+$F(x/a,b) = \begin{cases} \frac{1}{b - a}, \; if \; a \leq x \leq b \\ 0, \; if \; x \notin [a,b] \end{cases}$
+
+\item Exponential distribution:
+
+$F(x/\alpha) = \begin{cases} \alpha e^{-\alpha x}, \; if x \geq 0 \\ 0, \; if \; x \notin [0,+\infty) \end{cases}$
+
+\item Normal distribution:
+
+$F(x/\mu,\sigma) = \frac{1}{\sqrt{2 \pi \sigma^{2}}} \; e^{\frac{(x - \mu)^{2}}{2 \sigma^{2}}}$
+        
+\end{itemize}
+
+\end{document}
