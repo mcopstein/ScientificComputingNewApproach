@@ -15,7 +15,7 @@
 
 \begin{itemize}
 
-\item We define as Probability density function an application $f: K \rightarrow \mathbb{R}$. $f$ presents the following properties:
+\item We define as Probability density function an application $f: K \rightarrow \mathbb{R}$, where $K$ is a random variable. $f$ presents the following properties:
 
 \begin{enumerate}
 
@@ -25,9 +25,17 @@
 
 \end{enumerate}
 
-\item We define as Probability distribution the function $F: K \rightarrow [0,1]$. $F$ presents the following property:
+\item We define as Probability distribution the function $F: K \rightarrow [0,1]$, where $K$ is a random variable. $F$ presents the following properties:
 
-$F(a \leq x \leq b) = \int\limits_{a}^{b} f(x) dx$
+\begin{enumerate}
+
+\item $F(a \leq K \leq b) = \int\limits_{a}^{b} f(x) dx, \forall \; a,b \in \mathbb{R}$
+
+\item $F(K \geq a) = \int\limits_{a}^{+\infty} f(x) dx, \forall \; a \in \mathbb{R}$
+
+\item $F(K \leq b) = \int\limits_{-\infty}^{b} f(x) dx, \forall \; b \in \mathbb{R}$
+
+\end{enumerate}
 
 \item Uniform distribution:
 
