@@ -1,0 +1,94 @@
+\documentclass[oneside]{book}
+\usepackage[utf8]{inputenc}
+
+\title{CCM218 Notes}
+\author{Luca Hullen Panuci }
+\date{August 2019}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\chapter{\emph{Probability}} 
+\label{The Conditional Probability}
+\begin{document}
+
+\maketitle
+\section{The Conditional Probability}
+\subsection{Probability Space}
+
+The mathematical concept of a probability space, introduced as a three-tuple\\ $\langle$ $\Omega$, $\Sigma$, P $\rangle$, in which the three components are:
+
+\begin{itemize}
+ \item $\Omega$, The sample space, that represents all possible events \\($\Omega$ must be a nonempty set)
+ \item $\Sigma$, The event space, the subsets of $\Omega$ that form a $\sigma$-algebra
+ \item P, The probability function, P:$\Sigma$ $\longmapsto$ [0,1], that assigns probabilities to the events in $\Sigma$
+\end{itemize}
+   
+\subsection{Conditional Probability}
+
+Consider a give probability space $\langle$ $\Omega$, $\Sigma$, P $\rangle$. \\ 
+
+Definition: If $A$,$B$ $\in$ $\Sigma$ and P($B$) $>$ 0, then the conditional probability of $A$ given $B$, defined as P($A$$|$$B$) is 
+\\ \\ 
+\hspace*{4cm}P(A$|$B) =  $\frac{P(A \cap B)}{P(B)}$
+\\ \\ 
+We can interpret P(A$|$B) as the probability of the outcome is in $A$, given that you know it is in $B$.
+\begin{itemize}
+
+    \item If A and B are disjoint, then $P(A \cap B) = 0$, and\hspace*{0.15cm}$P(A | B) = 0$, too. $
+    
+    \item If  B $\subset$ A, then P(A $|$ B) = P(B)/P(B) = 1.  \\ We can interpret this as "B implies A" 
+    
+    \item  If  B $\subset$ A, then P(A $|$ B) = P(A)/P(B) $<$ 1. 
+    \\ We can interpret this as "B is necessary for A".$
+\end{itemize}
+\subsection{Bayes' Theorem}
+We now introduce Bayes's theorem(alternatively Bayes' law or Bayes' rule) that describes the belief level in occurrence of an event.\\\\
+Bayes' theorem is stated mathematically as the following equation: \\
+\begin{center}
+P(A $|$ B) =  $\frac{P(B | A)P(A)}{P(B)}$\\\\
+\end{center}
+
+Where A and B are events and P(B)\ne0.
+\\\\$
+\textit{Proof.} From manipulating the conditional probability formula, we can get that:\\
+
+\begin{center}
+
+$P(A \cap B) = P(B|A)P(A) = P(A|B)P(B)$\\[0.2cm]
+
+    \Rightarrow P(A|B)  = \frac{P(B|A)P(A)}{P(B)}
+    
+\end{center}
+  
+\subsection{Total Probability Theorem}
+
+Let $A_1$,$A_2$,...,$A_n$ $\in$ $\Omega$. For any event B:
+
+\begin{center}
+
+P(B) = $\sum\limits_{j=1}^{n}$ $P(A_j)P(B|A_j)$
+
+\end{center}
+
+\textit{Proof.}
+Considering that B = \cup(B\cap$A_j$) (disjoint union), so:
+\\
+
+\begin{center}
+
+   P(B) = $\sum\limits_{j=1}^{n}$ $P(B\cap $A_j$)$  
+   
+\end{center}
+
+\vspace*{0.3cm}That theorem follows from $P(B\cap A_j) = P(A_j)P(B| $A_j$)$.
+
+\subsection{The Frequentist Interpretation of Probability}
+\\
+One of the interpretations of probability is the frequentism(Kolmogorov).\\ Here, the probability of certain event is its relative frequency in a big number of trials. \\\\ Mathematically, we have:
+\begin{center}
+P(A) = $\lim_{n\rightarrow \infty}$ $\frac{n_A}{n}$
+
+\end{center}
+\vspace*{0.2}This interpretation is very usual to scientists, where an experiment is repeated many times in order to determine its result.
+
+\end{document}
