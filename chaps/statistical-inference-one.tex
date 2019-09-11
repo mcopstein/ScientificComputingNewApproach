@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Statistical inference}
+\author{Gabriel Aguiar}
+\date{August 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Cox's axioms}
+
+Let $B(x)$ the degree of belief about a logical proposition $x$, $\hat{x}$ the negation of $x$ and $B(x/y)$ the degree of belief about $x$ since $y$ is true. That way:
+
+\begin{itemize}
+
+\item If $B(x) > B(y)$ and $B(y) > B(z)$, then $B(x) > B(z)$.
+
+\item $B(x) = f(B(\hat{x}))$, where $f$ is any function.
+
+\item $B(x,y) = g(B(x/y),B(y))$, where $g$ is any function and $B(x,y)$ is the degree of belief about $x$ and $y$.
+
+\end{itemize}
+
+\section{Cox's theorem}
+
+A function P that satisfies Cox's axioms also satisfies:
+
+\begin{itemize}
+
+\item $P(x) = 1 \Leftrightarrow P(\hat{x}) = 0$
+
+\item $0 \leq P(x) \leq 1$
+
+\item $P(x) = 1 - P(\hat{x})$
+
+\item $P(x,y) = P(x/y) \; P(y)$
+
+\end{itemize}
+
+\section{Probabilistic interpretation of Cox's formulations}
+
+Given the Cox-generated formulations, the probability function fits perfectly as a degree of belief. With this, we can deal with $B(x)$ amid the constructions of Probability theory.
+
+\section{Bayes' theorem}
+
+Taking the probability function P as a degree of belief, we have:
+
+\begin{itemize}
+
+\item $P(H/D) = \frac{1}{\sum\limits_{H_{i}} P(D/H_{i}) \; P(H_{i})} \; P(D/H) \; P(H)$
+
+$H$: Hypothesis; $D$: Data;
+
+$P(H/D)$: Called "later"; $P(D/H)$: Called "likelihood"
+
+$P(H)$: Called "previous"; $P(D/H_{i})$: Called "evidence"
+
+\end{itemize}
+
+\section{Estimation, error bars and confidence intervals}
+
+Take a degree of belief $P(\theta/D,I)$, where $D$ represents the data and $I$ represents the context information. Let $\hat{\theta}$ the estimate for the possible values of $\theta$. That way:
+
+\begin{itemize}
+
+\item $\frac{dP}{d\theta} (\hat{\theta}) = 0$ and $\frac{d^{2}P}{d\theta^{2}} < 0$
+
+That is, $\hat{\theta}$ represents a maximum point of the function $P(\theta/D,I)$.
+
+\item If we take the natural logarithm of the function $P(\theta/D,I$ and expand it into a truncated Taylor polynomial in the second order around $\hat{\theta}$:
+
+$ln \; P(\theta/D,I) \equiv L(\theta) = L(\hat{\theta}) + \frac{dP}{d\theta} (\hat{\theta}) \; (\theta - \hat{\theta}) + \frac{1}{2} \; \frac{d^{2}P}{d\theta^{2}} (\hat{\theta}) \; (\theta - \hat{\theta})^{2}$
+
+$\Rightarrow P(\theta/D,I) \approx \frac{1}{A} \; e^{\frac{1}{2} \; \frac{d^{2}P}{d\theta^{2}} (\hat{\theta}) \; (\theta - \hat{\theta})^{2}}$
+
+\end{itemize}
+
+\end{document}
