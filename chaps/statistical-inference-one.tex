@@ -5,7 +5,7 @@
 
 \title{Statistical inference}
 \author{Gabriel Aguiar}
-\date{August 2019}
+\date{September 2019}
 
 \begin{document}
 
@@ -73,7 +73,7 @@ That is, $\hat{\theta}$ represents a maximum point of the function $P(\theta/D,I
 
 \item If we take the natural logarithm of the function $P(\theta/D,I$ and expand it into a truncated Taylor polynomial in the second order around $\hat{\theta}$:
 
-$ln \; P(\theta/D,I) \equiv L(\theta) = L(\hat{\theta}) + \frac{dP}{d\theta} (\hat{\theta}) \; (\theta - \hat{\theta}) + \frac{1}{2} \; \frac{d^{2}P}{d\theta^{2}} (\hat{\theta}) \; (\theta - \hat{\theta})^{2}$
+$ln \; P(\theta/D,I) \equiv L(\theta) \approx L(\hat{\theta}) + \frac{dP}{d\theta} (\hat{\theta}) \; (\theta - \hat{\theta}) + \frac{1}{2} \; \frac{d^{2}P}{d\theta^{2}} (\hat{\theta}) \; (\theta - \hat{\theta})^{2}$
 
 $\Rightarrow P(\theta/D,I) \approx \frac{1}{A} \; e^{\frac{1}{2} \; \frac{d^{2}P}{d\theta^{2}} (\hat{\theta}) \; (\theta - \hat{\theta})^{2}}$
 
