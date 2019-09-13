@@ -71,11 +71,13 @@ Take a degree of belief $P(\theta/D,I)$, where $D$ represents the data and $I$ r
 
 That is, $\hat{\theta}$ represents a maximum point of the function $P(\theta/D,I)$.
 
-\item If we take the natural logarithm of the function $P(\theta/D,I$ and expand it into a truncated Taylor polynomial in the second order around $\hat{\theta}$:
+\item For simplicity of notation, $P(\theta/D,I) = P(\theta/D)$.
 
-$ln \; P(\theta/D,I) \equiv L(\theta) \approx L(\hat{\theta}) + \frac{dP}{d\theta} (\hat{\theta}) \; (\theta - \hat{\theta}) + \frac{1}{2} \; \frac{d^{2}P}{d\theta^{2}} (\hat{\theta}) \; (\theta - \hat{\theta})^{2}$
+\item If we take the natural logarithm of the function $P(\theta/D)$ and expand it into a truncated Taylor polynomial in the second order around $\hat{\theta}$:
 
-$\Rightarrow P(\theta/D,I) \approx \frac{1}{A} \; e^{\frac{1}{2} \; \frac{d^{2}P}{d\theta^{2}} (\hat{\theta}) \; (\theta - \hat{\theta})^{2}}$
+$ln \; P(\theta/D) \equiv L(\theta/D) \approx L(\hat{\theta}/D) + \frac{dL}{d\theta} (\hat{\theta}/D) \; (\theta - \hat{\theta}) + \frac{1}{2} \; \frac{d^{2}L}{d\theta^{2}} (\hat{\theta}/D) \; (\theta - \hat{\theta})^{2}$
+
+$\Rightarrow P(\theta/D) \approx \frac{1}{A} \; e^{\frac{1}{2} \; \frac{d^{2}L}{d\theta^{2}} (\hat{\theta}/D) \; (\theta - \hat{\theta})^{2}}$
 
 \end{itemize}
 
