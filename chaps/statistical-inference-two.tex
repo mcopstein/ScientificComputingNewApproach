@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Statistical inference}
+\author{Gabriel Aguiar}
+\date{September 2019}
+
+\begin{document}
+
+\maketitle
+
+It can be said that the main objectives of statistical inference are the selection of models for phenomena and the estimation of parameters for such models. Here we will work on a classic example of estimation: the probability of getting "heads" on a coin toss (honest or not).
+
+We know that this type of event obeys a binomial distribution:
+
+\hfill
+
+$P(k/\theta) = \binom{n}{k} \; \theta^{k} \; (1 - \theta)^{n - k}$
+
+\hfill
+
+$k$: Occurrences (in this case, the number of "heads" in N coin tosses)
+
+$\theta$: probability of getting "head" on a coin toss (honest or not)
+
+\hfill
+
+Estimation problem: Which is the coin bias? To answer this question, let's use the Bayes' theorem:
+
+\hfill
+
+$P(\theta/k) = \frac{1}{\sum\limits_{\theta_{i}} P(k/\theta_{i}) \; P(\theta_{i})} \; P(k/\theta) \; P(\theta)$
+
+\hfill
+
+By the Principle of sufficient reason, we have no cause to point out a bias towards $\theta$. In this way we can express the function $P(\theta)$ through the following behavior:
+
+\hfill
+
+$P(\theta) = c$, $0 \leq \theta \leq 1$, with $c$ constant
+
+\hfill
+
+Thus, as the function $P(\theta/k)$ denominator also represents a constant, we have:
+
+\hfill
+
+$P(\theta/k) = C \theta^{k} \; (1 - \theta)^{n - k}$, with $C$ constant
+
+\hfill
+
+Thinking about the function $P(\theta/k)$, let $\hat{\theta}$ the estimate for the possible values of $\theta$. Thus, as $\hat{\theta}$ represents a maximum point of this function, we have:
+
+\hfill
+
+$\frac{dP}{d\theta} (\hat{\theta}/k) = 0$ and $\frac{d^{2}P}{d\theta^{2}} (\hat{\theta}/k) < 0$
+
+\hfill
+
+If we take the natural logarithm of the function $P(\theta/k)$:
+
+\hfill
+
+$P(\theta/k) = C \theta^{k} \; (1 - \theta)^{n - k} \Rightarrow ln \; P(\theta/k) = ln \; C + k \; ln \; \theta + (n - k) \; ln \; (1 - \theta)$
+
+\hfill
+
+$L(\theta/k) \equiv ln \; P(\theta/k)$
+
+\hfill
+
+$\frac{dP}{d\theta} (\hat{\theta}/k) = 0 \Rightarrow \frac{dL}{d\theta} (\hat{\theta}/k) = 0 \Rightarrow \frac{k}{\hat{\theta}} + \frac{n - k}{1 - \hat{\theta}} = 0 \Rightarrow \hat{\theta} = \frac{k}{n}$
+
+\hfill
+
+Taking $L(\theta/k)$ Taylor's second order polynomial around $\hat{\theta}$:
+
+\hfill
+
+$L(\theta/k) \approx L(\hat{\theta}/k) + \frac{dL}{d\theta} (\hat{\theta}/k) \; (\theta - \hat{\theta}) + \frac{1}{2} \; \frac{d^{2}L}{d\theta^{2}} (\hat{\theta}/k) \; (\theta - \hat{\theta})^{2}$
+
+\hfill
+
+$\Rightarrow P(\theta/k) \approx \frac{1}{Z} \; e^{\frac{1}{2} \; \frac{d^{2}L}{d\theta^{2}} (\hat{\theta}/k) \; (\theta - \hat{\theta})^{2}}$, with $Z$ constant
+
+\hfill
+
+Thus, it can be said that $P(\theta/k)$ represents a normal distribution of mean $\mu$ and standard deviation $\sigma$. That way:
+
+\hfill
+
+$P(\theta/k) \approx \frac{1}{Z} \; e^{\frac{1}{2} \; \frac{d^{2}L}{d\theta^{2}} (\hat{\theta}/k) \; (\theta - \hat{\theta})^{2}} = \frac{1}{\sqrt{2 \pi \sigma^{2}}} \; e^{\frac{(\theta - \mu)^{2}}{2 \sigma^{2}}}$
+
+\hfill
+
+$\Rightarrow \sigma^{2} = \frac{1}{-\frac{d^{2}L}{d\theta^{2}} (\hat{\theta}/k)}$
+
+\hfill
+
+$\frac{d^{2}L}{d\theta^{2}} (\hat{\theta}/k) = -\frac{n}{\hat{\theta} \; (1 - \hat{\theta})}$
+
+\hfill
+
+$\Rightarrow \sigma^{2} = \frac{\hat{\theta} \; (1 - \hat{\theta})}{n} \Rightarrow \sigma = \sqrt{\frac{\hat{\theta} \; (1 - \hat{\theta})}{n}}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
