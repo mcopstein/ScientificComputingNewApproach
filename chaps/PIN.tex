@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Pin}
+\author{Jonas Gonçalves}
+\date{September 2019}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}
+\qquad Short for \textbf{personal identification number, PIN} is a numeric of alpha-numeric password used in the process of authenticating a user accessing a system. It's often used with automated bank teller machines, telephone calling cards, and accessing Wireless networks
+
+The personal identification number has been the key to flourishing the exchange of private data between different data-processing centers in computer networks. PINs can also be used to authenticate banking systems with carholders, governments with citizens, enterprises with employees, and with users, among other uses.
+\begin{itemize}
+    \item[1.] A four-digit PIN is selected. What's the probability that there are no repeated digits?
+    
+    \item[2.] What's the probability that a six-digit PIN has at least one repeated digit?
+\end{itemize}
+
+\section{Solution 1}
+
+\quad There are 10 possible values for each digit of the PIN (0,1,2,...,9).
+
+There are a total of \(10^4\) possible PINs.
+\[P_T = 10 \times 10 \times 10 \times 10 = 10^4\]
+
+To have no repeated digit, all four digit would have to be different, which is selecting without replacement. We could either compute \(10 \times 9 \times 8 \times 7\) , or notice that this is the same permutation as \[7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 7!\]
+\[P_4 = 7! = 5040\]
+
+The probability of no repeated digits is the number of 4 digit PINs with no repeated digit divided by the total of 4 digit PINs.
+\[Pr = \frac{Pr_4}{Pr_T} = \frac{5040}{10000} = 0.504\]
+
+\section{Solution 2}
+The probability of having at least one repeated digit is the 1 minus the probability of not having any repeated digits.
+\[Pr = 1 - \frac{P_6}{P_T}\]
+\[P_T = 10^6\]
+\[P_6 = 10 \times 9 \times 8 \times 7 \times 6 \times 5 = \frac{10!}{4!} = 151200\]
+
+\[P = 1 - \frac{151200}{10^6} = 1 - 0.1512 = 0.8488\]
+\end{document}
