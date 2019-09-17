@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Probability fundamentals}
+\author{Gabriel Aguiar}
+\date{August 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Continuous model}
+
+\begin{itemize}
+
+\item We define as Probability density function an application $f: K \rightarrow \mathbb{R}$, where $K$ is a random variable. $f$ presents the following properties:
+
+\begin{enumerate}
+
+\item Non-negativity: $f(x) \geq 0, \forall \; x \in K$
+
+\item Normalization: $\int\limits_{-\infty}^{+\infty} f(x) dx = 1$
+
+\end{enumerate}
+
+\item We define as Probability distribution the function $F: K \rightarrow [0,1]$, where $K$ is a random variable. $F$ presents the following properties:
+
+\begin{enumerate}
+
+\item $F(a \leq K \leq b) = F(\{ \; s \in \Omega: K(s) \in [a,b] \; \}) = \int\limits_{a}^{b} f(x) dx, \forall \; a,b \in \mathbb{R}$
+
+\item $F(K \geq a) = F(\{ \; s \in \Omega: K(s) \in [a,+\infty) \; \}) = \int\limits_{a}^{+\infty} f(x) dx, \forall \; a \in \mathbb{R}$
+
+\item $F(K \leq b) = F(\{ \; s \in \Omega: K(s) \in (-\infty,b] \; \}) = \int\limits_{-\infty}^{b} f(x) dx, \forall \; b \in \mathbb{R}$
+
+\end{enumerate}
+
+\item Uniform distribution:
+
+$F(x/a,b) = \begin{cases} \frac{1}{b - a}, \; if \; a \leq x \leq b \\ 0, \; if \; x \notin [a,b] \end{cases}$
+
+\item Exponential distribution:
+
+$F(x/\alpha) = \begin{cases} \alpha e^{-\alpha x}, \; if x \geq 0 \\ 0, \; if \; x \notin [0,+\infty) \end{cases}$
+
+\item Normal distribution:
+
+$F(x/\mu,\sigma) = \frac{1}{\sqrt{2 \pi \sigma^{2}}} \; e^{\frac{(x - \mu)^{2}}{2 \sigma^{2}}}$
+        
+\end{itemize}
+
+\end{document}
