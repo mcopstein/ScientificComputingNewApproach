@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\title{Exercício resolvido distribuição de Poisson: Determinação da quantidade de bactérias por litro de leite}
+\author{Maria Carolina Boer Copstein}
+\date{January 2020}
+\begin{document}
+\maketitle
+\section{Introdução}
+
+\hfill
+
+A distribuição de Poisson descreve eventos aleatórios que ocorrem a uma taxa média definida.Representa a probabilidade de um evento ocorrer um dado número de vezes em um determinado período de tempo,ou espaço,volume ou elemento e é descrito pela fórmula abaixo:
+
+\begin{center}
+    $\Pr(x)=\frac{\mu^{x}.e^{-\mu}}{x!}$
+\end{center}
+
+\hfill
+
+Sendo:
+
+\hfill
+
+x=Número de ocorrências de um determinado evento durante um período de tempo,em uma área,volume ou elemento.
+
+\hfill
+
+$\mu$=Taxa de ocorrência do evento x.
+
+\hfill
+
+$e$ (aproximadamente) $=2,71828$
+
+\hfill
+
+Aplicação:
+
+\hfill
+
+Supondo que a média da quantidade de bactérias seja de 10 mil  por litro de leite e supondo que o padrão para  o leite não ser considerado contaminado seja de até 15 mil bactérias,qual a probabilidade de  um litro de leite estar contaminado?
+
+\hfill
+
+O problema pode ser descrito por uma distribuição de Poisson onde a função de probabilidade é dada por:
+\begin{center}
+    $\Pr(x)=\frac{10^{x}.e^{-10}}{x!}$
+\end{center}
+
+
+Substituindo os dados do problema:
+\hfill
+
+$Pr[x>15]=1-Pr[x=<15]=1-\sum_{x=0}^{15}\frac{10^{x}.e^{-10}}{x!}=1-0,9513=0,0487$
+
+\hfill 
+
+Com isso a probabilidade de se ter um litro de leite contaminado é de $0,0487$.
+
+\hfill
+
+\textbf{Referências:} \
+
+\hfill
+
+1.Reis, E. A., Reis, I. A. (2016). Introdução aos Modelos Probabilísticos Discretos: Binomial,
+Hipergeométrico, Binomial Negativo, Geométrico e Poisson. Relatório Técnico do
+Departamento de Estatística da Universidade Federal de Minas Gerais. 
+\end{document}
+
