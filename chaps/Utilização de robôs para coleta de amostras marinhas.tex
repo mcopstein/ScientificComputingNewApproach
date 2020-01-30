@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\title{Utilização de robôs para coleta de amostras em  mares}
+\author{Maria Carolina Boer Copstein }
+\date{January 2020}
+
+\begin{document}
+\maketitle
+\hfill 
+
+Robôs inventados por pesquisadores do MIT e do nstituto Oceanográfico de Woods Hole são capazes de determinar áreas inexploradas dos mares que possuem amostras interessantes cientificamente.Uma aplicação é em regiões onde ocorreram vazamento de produtos químicos.
+O problema dos robôs é que muitas vezes são ineficientes ou imprecisos,consumindo muito tempo na coleta de amostras que por sua vez são desinteressantes.
+\hfill
+
+Com isso o sistema desenvolvido pelo MIT e WHOI denominado PLUMES se concentra  em métodos  que proporcionem que os robôs cheguem a regiões mais propícias a boas amostras com maior agilidade e eficiência.
+\hfill
+
+ Utiliza-se de  técnicas probabilísticas para prever os caminhos e pesa a partir dos dados se deve seguir por uma determinada rota ou explorar regiões desconhecidas. O sistema em 100 ensaios coletou de 7 a 8 vezes mais amostras do que métodos tradicionais.Um robô que se utiliza do sistema PLUMES usa um modelo probabilístico denominado Gaussiano para prever as variáveis ambientais, assim gerando uma distribuição de caminhos possíveis para o robô seguir e usa valores de incerteza para a avaliação da qualidade do caminho. No início as rotas são escolhidas aleatoriamente coletando dados dobre o ambiente em que se encontra possibilitando que o modelo de processo Gaussiano analize as observações e determine os próximos movimentos.Utiliza uma nova função objetiva que é frequente em apredizagem de máquinas quando se quer maximizar a recompensa,para decidir se o robô explora o conhecimento já adquirido ou explora um novo local."A decisão de onde coletar a próxima amostra depende da capacidade do sistema de "alucinar" todas as ações futuras possíveis a partir de sua localização atual. Para isso, utiliza uma versão modificada do Monte Carlo Tree Search (MCTS), uma técnica de planejamento de caminhos popularizada para alimentar sistemas de inteligência artificial" segundo o texto da referência 1.
+\hfill
+
+Atualmente os estudos estão sendo feitos com o objetvo de aprimorar o sistema para analisar certas alterações ambientais como por exemplo gases químicos liberados na atmosfera.
+
+\hfill
+
+\textbf{Referências:} \
+
+\hfill 
+
+1.MATHESON, Rob. Autonomous system improves environmental sampling at sea. In: MIT News Office. [S. l.], 4 nov. 2019. Disponível em: http://news.mit.edu/2019/autonomous-system-sea-sampling-1104. Acesso em: 30 jan. 2020.
+
+
+
+
+\end{document}
