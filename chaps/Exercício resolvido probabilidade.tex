@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\title{Exercícios sobre probabilidade: Mega-sena}
+\author{Maria Carolina Boer Copstein}
+\date{January 2020}
+
+\begin{document}
+\maketitle
+\section{Introdução}
+\hfill
+ Jogos de azar são feitos de forma a existir uma maior probabilidade de fracasso do que de sucesso. Sendo assim oferece um prêmio de alto valor com a finalidade de atrair apostadores e um jogo com regras simples. Com base nisso, em cada item apresentado abaixo será calculado a probabilidade de uma pessoa levar o dinheiro em diferentes condições. 
+
+\section{Probabilidade de vencer}
+\subsection{Fazendo uma aposta mínima}
+Conceito envolvido:
+\hfill
+
+Combinação de uma determinada quantidade de números escolhendo uma quantidade menor dentre esses números para formar grupos.
+
+\hfill
+
+Aplicação:
+\hfill 
+
+Sabendo que uma cartela de jogo tem 60 números e uma aposta mínima consiste na escolha de 6 números,temos a combinação de 60 escolhendo 6,o que resulta em:
+
+\begin{center}
+    $C_{60,6}=\frac{60!}{6!(60-6)!}=50063860$
+\end{center}
+
+\hfill 
+Com isso existem 50063860 jogos possíveis escolhendo 6 números dentre os 60 possíveis e a probabilidade de a pessoa ganhar fazendo uma aposta mínima pode ser dada por:
+
+\begin{center}
+    $\Pr(ganhar)=\frac{1}{50063860}=1.99745*10^{-8}$
+\end{center}
+
+Ou seja a probabilidade da pessoa ter o jogo premiado dentre os 50063860 possíveis é de aproximadamente  0.00000002.
+
+
+\subsection{Sabendo que acertou os três primeiros números}
+Conceito envolvido:
+\hfill 
+
+Quando um evento que restringe o espaço amostral ocorre, a probabilidade de acontecer um novo evento é denominada probabilidade condicional.
+
+\hfill
+
+Aplicação:
+\hfill
+
+Nesse caso sabemos que a pessoa já acertou três números,ou seja,é de se esperar que a probabilidade dela ganhar seja maior 
+
+
+\begin{center}
+    $\Pr(a/b)=\frac{\Pr(a)\cap \Pr(b)}{\Pr(b)}$
+\end{center}
+
+\hfill
+
+Aplicando ao caso descrito acima temos:
+\begin{center}
+    $\Pr(A6/A3)=\frac{\Pr(A6 \cap A3)}{\Pr( A3)}$
+    
+    
+    $\Pr(A6/A3)=\frac{\Pr(6)}{A3}=\frac{\frac{1}{C_{60,6}}}{\frac{C_{6,3}}{C_{60,3}}}=0.000034$
+    
+    A6=acertar os 6 números
+    
+    A3=acertar 3 primeiros números
+\end{center}
+
+\hfill
+
+Como era de se esperar a probabilidade de ganhar na Mega sena sabendo que acertou os três primeiros números é maior do que simplesmente a de ganhar acertando os 6 números apesar disso o valor ainda é muito baixo.
+
+\subsection{Tempo médio,em anos,para ganhar apostando em 
+todos os concursos}
+\hfill
+
+Conceitos envolvidos:
+
+\hfill
+
+Esperança matemática:Média ponderada de valores pela sua probabilidade 
+
+\begin{center}
+    $E(X)=\frac{1}{p}$
+\end{center}
+
+Como são realizados dois concursos semanais são necessárias:
+
+\begin{center}
+    $E(X)=\frac{1}{2*\frac{1}{50063860}}=25031930$
+\end{center}
+
+Com isso 25031930 semanas jogando é o tempo médio para se  ganhar na mega sena considerando que um ano tem aproximadamente 52 semanas teremos o equivalente de 481.383 anos.
+
+\hfill
+
+\textbf{Referências:} \
+
+\hfill
+
+1.SOUZA PRADO, José William. NOÇÕES DE PROBABILIDADE 
+\hfill
+
+POR MEIO DE JOGOS DE AZAR. 2015. UNIVERSIDADE ESTADUAL
+\hfill
+
+DE FEIRA DE SANTANA. Disponível em:
+\hfill 
+
+https://repositorio.ufpb.br/jspui/bitstream/tede/9474/
+\hfill
+
+2/arquivototal.pdf. Acesso em: 29 jan. 2020.
+
+\hfill
+
+2.DEKKING, F.M.; KRAAIKAMP, C.; LOPUHAA, H.P.;MEESTER, L.E.
+\hfill 
+
+A Modern Introduction to Probability and Statistics. [S. l.: s. n.], 2005.
+
+
+\end{document}
