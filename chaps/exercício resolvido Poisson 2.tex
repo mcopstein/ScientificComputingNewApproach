@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\graphicspath{{./images/}}
+
+\title{Exercício resolvido aproximação de binomial por Poisson}
+\author{maria.copstein }
+\date{January 2020}
+
+\begin{document}
+\maketitle
+\hfill 
+
+A distribuição binomial considera uma variável aleatória X que conta o número de sucessos em n ensaios e  a probabilidade p de sucesso em cada evento e é descrita pela função abaixo:
+\begin{center}
+    $\Pr(X=x)=\frac{n!}{(n-x)!x!}p^x(1-p) ^ {n-x}$
+    
+\end{center}
+A distribuição de Poisson é a probabilidade de ocorrências de sucesso em um determinado intervalo ou região,de um evento que ocorre a uma taxa definida.
+
+\hfill 
+
+a)Em quais condições a distribuição binomial pode ser aproximada pela distribuição de Poisson?
+
+\hfill 
+
+R:Quando o número de ensaios é muito grande $n\rightarrow\infty$ e $p\rightarrow\ 0$ ou seja a probabilidade de sucesso de cada evento é baixa.
+
+\hfill
+
+b)A partir da distribuição binominal deduza a função da distribuição de Poisson.
+
+\begin{center}
+   $\displaystyle\lim_{p\rightarrow\ 0  n\rightarrow\infty} \frac{n!}{(n-x)!x!}p^x(1-p) ^ {n-x}\cong \frac{\lambda^{x}.e^{-\lambda}}{x!}$
+   sendo ${\lambda}$=np.
+   
+   
+\hfill 
+   
+\textbf{Referências:} \
+   
+\hfill
+
+1.http://www.ufjf.br/clecio\_ferreira/files/2013/10/Cap-7-Principais-Variaveis-Aleatorias-Discretas.pdf
+    
+\end{center}
+
+
+
+\end{document}
