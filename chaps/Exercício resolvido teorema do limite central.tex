@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\graphicspath{{./images/}}
+
+\title{Exercício resolvido teorema do limite central}
+\author{Maria Carolina Boer Copstein}
+\date{January 2020}
+
+\begin{document}
+
+\maketitle
+Pesquisadores afirmam que uma vacina tem eficácia em $80$ por cento dos casos.Com isso 36 indivíduos que tomaram a vacina foram realizar testes. Qual a probabilidade da eficácia ser inferior a $75$ por cento? 
+
+\hfill 
+
+R:Não temos dados sobre a média e desvio padrão dos resultados obtidos pela pesquisa mas sabemos que só existem duas opções para uma pessoa ou está imunizada ou não está e portanto segue uma distribuição binomial. Devido o tamanho amostral pelo teorema do limite central podemos realiar uma aproximação normal,através de uma váriavel Z
+\begin{center}
+    $ Z=\frac{P-p}{\sqrt{\frac{p(1-p)}{n}})}=\frac{0,75-0,8}{\sqrt{\frac{0,8(0,2)}{36}})}= -0,75$
+    
+\hfill
+
+    $Pr(P<0,75)=Pr(P< -0,75)=0,2266$
+\end{center}
+Portanto a probabilidade de menos de $75$ por cento estar imunizado é de $22,66$ por cento.
+
+\hfill 
+
+\textbf{Referências:} \
+
+\hfill 
+
+1.COSTA ALVES, JOSÉ EDUARDO. TEOREMA CENTRAL
+
+\hfill 
+DO LIMITE: COMPREENDENDO E APLICANDO. [S. l.], 26 jul. 2016. Disponível em: https://sca.profmat-sbm.org.br/sca\_v2/get\_tcc3.php?id=94792. Acesso em: 30 jan. 2020.
+
+
+
+
+
+\end{document}
